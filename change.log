@@ -1,0 +1,21 @@
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country) VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
+ALTER TABLE Persons AUTO_INCREMENT=1;
+Insert into persons (PersonID,LastName,FirstName,Address,City) values(1 , 'Jakhar' , 'Aryan' , 'Rajgarh road' , 'Pilani');
+Insert into persons (PersonID,LastName,FirstName,Address,City) values(2 , 'Agarwal' , 'Vidhi' , 'whitehat jr' , 'Kolkata');
+Insert into persons (PersonID,LastName,FirstName,Address,City) values(3 , 'Jakhar' , 'Aradhya' , 'Rajgarh road' , 'Pilani');
+Insert into persons (PersonID,LastName,FirstName,Address,City) values(4 , 'Kumar' , 'Akshay' , 'Kahi to' , 'Dharti par');
+COUNT
+select count(PersonID) from persons where City = 'Pilani'
+select count(PersonID) as PilaniPeople from persons where City = 'Pilani'
+
+update persons set city = 'Banglore' where PersonID = 2;
+
+CREATE TABLE Students ( Personid int NOT NULL AUTO_INCREMENT, LastName varchar(255) NOT NULL, FirstName varchar(255), Age int, PRIMARY KEY (Personid) );
+
+alter table persons add Marks int;
+
+update persons set Marks = 70 where PersonID in (1,2,3,4)
+
+select sum(Marks) from person where City = 'Pilani';
+
+select max(Marks) as MaxMarks from persons where City = 'Pilani';
